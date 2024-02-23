@@ -1,0 +1,8 @@
+wsj_scrapping/Michael Brown/
+wsj_scrapping/results/
+wsj_scrapping/results_txt/
+wsj_scrapping/word_files/
+*.zip
+TrendingYoutubeVideos/archive/
+TrendingYoutubeVideos/bhavna-project_accessKeys.csv
+TrendingYoutubeVideos/bhavna-project_credentials.csv
