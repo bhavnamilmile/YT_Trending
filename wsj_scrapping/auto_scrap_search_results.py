@@ -3,15 +3,19 @@ from selenium import webdriver
 import selenium.webdriver.support.ui as ui
 
 import pandas as pd
-
+import time
 #/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome  --user-data-dir="~/ChromeProfile1" --remote-debugging-port=9221
 import os
 
 #===================
-keyword = "BLM;Black Lives Matter"
-last_url_base = "https://www.wsj.com/search?query=%22BLM%22%3B%20%22Black%20Lives%20Matter%22&isToggleOn=true&operator=AND&sort=relevance&duration=1y&startDate=2014%2F11%2F01&endDate=2015%2F06%2F30&source=wsjie%2Cwsjsitesrch%2Cwsjpro%2Capfeed&page="
-page_count = 14
+# keyword = "BLM;Black Lives Matter"
+# last_url_base = "https://www.wsj.com/search?query=%22BLM%22%3B%20%22Black%20Lives%20Matter%22&isToggleOn=true&operator=AND&sort=relevance&duration=1y&startDate=2014%2F11%2F01&endDate=2015%2F06%2F30&source=wsjie%2Cwsjsitesrch%2Cwsjpro%2Capfeed&page="
+# page_count = 14
 
+keyword = "Darren Wilson; Michael Brown; Ferguson"
+last_url_base = "https://www.wsj.com/search?query=%22Darren%20Wilson%22%3B%20%22Michael%20Brown%22%3B%20%22Ferguson%22&isToggleOn=true&operator=AND&sort=relevance&duration=1y&startDate=2014%2F08%2F01&endDate=2014%2F11%2F01&source=wsjie%2Cwsjsitesrch%2Cwsjpro%2Capfeed%3D2&page="
+
+page_count = 18
 
 id = "Michael Brown"
 source = "WSJ"
@@ -67,5 +71,5 @@ for i in range(1, page_count+1):
         f.write(driver.page_source)
 
 
-
+    time.sleep(1)
 driver.quit()

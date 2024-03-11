@@ -110,6 +110,8 @@ if __name__ == "__main__":
     # for WSJ
     print(source_path   )
     for keyword in os.listdir(source_path):
+        print(keyword)
+        
         full_kw_path = os.path.join(source_path, keyword)
         for curr_file in os.listdir(full_kw_path):
             print(curr_file)
